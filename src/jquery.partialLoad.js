@@ -22,7 +22,7 @@
 
     var swapContent = function (response, target) {
       $(target).fadeOut('fast', function () {
-        $(this).html($(response).find(target)[0].innerHTML);
+        $(target).replaceWith($(response).find(target));
       }).fadeIn('fast');
     };
 
