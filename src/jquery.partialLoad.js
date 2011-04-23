@@ -13,6 +13,8 @@
 
     var settings = $.extend({
       targets: [],
+      type: 'GET',
+      data: {},
       complete: function () {},
     }, options);
 
@@ -29,6 +31,8 @@
     var loadPage = function (url, targets) {
       $.ajax({
         url: url,
+        type: options.type,
+        data: options.data,
         success: function (response) {
           for (var i in targets) {
             var target = targets[i];
